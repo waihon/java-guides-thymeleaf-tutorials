@@ -32,7 +32,9 @@ public class UserController {
     }
 
     @GetMapping("link-expression")
-    public String linkExpression() {
+    public String linkExpression(Model model) {
+        model.addAttribute("id", 8);
+
         return "link-expression";
     }
 
