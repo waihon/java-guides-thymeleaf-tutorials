@@ -31,4 +31,9 @@ public class UserController {
         return "message-expression";
     }
 
+    @GetMapping("link-expression")
+    public String linkExpression() {
+        return "link-expression";
+    }
+
 }
