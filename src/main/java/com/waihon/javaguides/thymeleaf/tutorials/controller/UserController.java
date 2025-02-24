@@ -38,4 +38,9 @@ public class UserController {
         return "link-expression";
     }
 
+    @GetMapping("fragment-expression")
+    public String fragmentExpression() {
+        return "fragment-expression";
+    }
+
 }
