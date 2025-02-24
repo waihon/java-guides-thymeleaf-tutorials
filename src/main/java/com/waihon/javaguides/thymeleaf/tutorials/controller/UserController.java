@@ -16,4 +16,14 @@ public class UserController {
 
         return  "variable-expression";
     }
+
+    @GetMapping("selection-expression")
+    public String selectionExpression(Model model) {
+        User user = new User("Waihon", "waihon@example.com", "ADMIN", "Male");
+
+        model.addAttribute("user", user);
+
+        return  "selection-expression";
+    }
+
 }
