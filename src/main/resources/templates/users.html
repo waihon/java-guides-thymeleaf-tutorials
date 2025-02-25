@@ -12,6 +12,12 @@
     <table>
         <thead>
             <tr>
+                <th>Count</th>
+                <th>Index</th>
+                <th>Odd?</th>
+                <th>Even?</th>
+                <th>First?</th>
+                <th>Last?</th>
                 <th>Name</th>
                 <th>Email</th>
                 <th>Role</th>
@@ -19,7 +25,13 @@
             </tr>
         </thead>
         <tbody>
-            <tr th:each="user : ${users}">
+            <tr th:each="user, userStatus : ${users}">
+                <td th:text="${userStatus.count}">Count</td></p>
+                <td th:text="${userStatus.index}">Index</td></p>
+                <td th:text="${userStatus.odd}">True</td></p>
+                <td th:text="${userStatus.even}">False</td></p>
+                <td th:text="${userStatus.first}">True</td></p>
+                <td th:text="${userStatus.last}">False</td></p>
                 <td th:text="${user.name}">Name</td></p>
                 <td th:text="${user.email}">Email</td></p>
                 <td th:text="${user.role}">Role</td></p>
