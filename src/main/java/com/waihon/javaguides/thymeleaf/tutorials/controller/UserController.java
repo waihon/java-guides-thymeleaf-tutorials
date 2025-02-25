@@ -22,7 +22,7 @@ public class UserController {
 
     @GetMapping("selection-expression")
     public String selectionExpression(Model model) {
-        User user = new User("Waihon", "waihon@example.com", "ADMIN", "Male");
+        User user = new User("Waihon", "waihon@example.com", "DEV", "Male");
 
         model.addAttribute("user", user);
 
@@ -76,6 +76,15 @@ public class UserController {
         model.addAttribute("users", users);
 
         return "if-unless";
+    }
+
+    @GetMapping("switch-case")
+    public String switchCase(Model model) {
+        User user = new User("Waihon", "waihon@example.com", "GUEST", "Male");
+
+        model.addAttribute("user", user);
+
+        return  "switch-case";
     }
 
 }
