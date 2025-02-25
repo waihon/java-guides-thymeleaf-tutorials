@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en"
+    xmlns:th="httpL//www.thymeleaf.org"
+>
+<head>
+    <meta charset="UTF-8">
+    <title>Iteration in Thymeleaf</title>
+    <link rel="stylesheet" href="/css/simple.css">
+</head>
+<body>
+    <table align="top">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Role</th>
+                <th>Gender</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="user : ${users}">
+                <td th:text="${user.name}">Name</td></p>
+                <td th:text="${user.email}">Email</td></p>
+                <td th:text="${user.role}">Role</td></p>
+                <td th:text="${user.gender}">Gender</td></p>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
