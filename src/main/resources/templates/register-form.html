@@ -48,6 +48,9 @@
             <input type="radio" th:field="*{gender}" value="Male" /> Male
             <input type="radio" th:field="*{gender}" value="Female" /> Female
             <br />
+            <label>Married?</label>
+            <input type="checkbox" th:field="*{married}" value="*{married}" />
+            <br />
             <label>Profession:</label>
             <select th:field="*{profession}">
                 <option th:each="p : ${professionList}" th:value="${p}" th:text="${p}"></option>
